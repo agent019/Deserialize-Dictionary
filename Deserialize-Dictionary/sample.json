@@ -1,0 +1,18 @@
+{
+    "api/people" : {
+        "get" : {
+            "authentication" : true
+        },
+        "post" : {
+            "authentication" : false
+        }
+    },
+    "api/book/{id}" : {
+        "get" : {
+            "authentication" : true
+        },
+        "put" : {
+            "authentication" : true
+        }
+    }
+}

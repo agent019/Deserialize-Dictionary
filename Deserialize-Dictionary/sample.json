@@ -1,18 +1,30 @@
 {
-    "api/people" : {
-        "get" : {
-            "authentication" : true
-        },
-        "post" : {
-            "authentication" : false
-        }
+  "swagger": "2.0",
+  "info": {
+    "version": "Profiles",
+    "title": "Profiles"
+  },
+  "paths": {
+    "/api/Profiles/Get": {
+      "get": {
+        "tags": [ "Profiles" ],
+        "operationId": "Profiles_GetById",
+        "consumes": [],
+        "produces": [],
+        "parameters": [ { "name": "id" } ]
+      }
     },
-    "api/book/{id}" : {
-        "get" : {
-            "authentication" : true
-        },
-        "put" : {
-            "authentication" : true
-        }
+    "/api/Profiles": {
+      "get": {
+        "tags": [
+          "Profiles"
+        ],
+        "operationId": "Profiles_GetBySubscriptionid",
+        "consumes": [],
+        "produces": [],
+        "parameters": [ { "name": "subscriptionId" } ]
+      }
     }
+  },
+  "definitions": {}
 }

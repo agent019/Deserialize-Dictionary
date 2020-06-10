@@ -2,15 +2,25 @@ using System.Collections.Generic;
 
 public class SampleJson
 {
-    public Dictionary<string, Endpoint> Endpoints { get; set; }
+    public string Swagger { get; set; }
+    public Info Info { get; set; }
+    public Dictionary<string, Dictionary<string, JsonEndpoint>> Paths { get; set; }
 }
 
-public class Endpoint
+public class Info
 {
-    public Dictionary<string, Method> Methods { get; set; }
+    public string Version { get; set; }
+    public string Title { get; set; }
 }
 
-public class Method
+public class JsonEndpoint
 {
-    public bool Authenticated { get; set; }
+    public List<string> Tags { get; set; }
+    public string OperationId { get; set; }
+    public List<Parameter> Parameters { get; set; }
+}
+
+public class Parameter
+{
+    public string Name { get; set; }
 }
